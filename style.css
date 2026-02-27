@@ -8,3 +8,9 @@
 .dp {
   transform: translateY(-20px);
 }
+.skills-text p {
+  color: var(--color-ddd-color);
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
