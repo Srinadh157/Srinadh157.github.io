@@ -14,50 +14,61 @@
   line-height: 1.8;
   margin-bottom: 15px;
 }
-/* NEW CLEAN SKILLS SECTION */
+/* ===== PREMIUM SKILLS SECTION ===== */
+
+.skills-section-container {
+  padding: 150px 0;
+  display: flex;
+  justify-content: center;
+}
 
 .skills-wrapper {
-  width: 60%;
-  margin: 0 auto;
-  padding-top: 150px;
+  width: 70%;
+  max-width: 1100px;
 }
 
 .skills-main-heading {
   text-align: center;
-  font-size: 3rem;
-  margin-bottom: 60px;
-  color: var(--color-light-blue);
+  font-size: 3.5rem;
+  margin-bottom: 70px;
+  font-family: 'Fira Code', monospace;
+  background: linear-gradient(90deg, #6bc5f8, #cf59e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .skills-category {
   margin-bottom: 60px;
-  text-align: center;
 }
 
 .skills-category h3 {
   font-size: 2.2rem;
   margin-bottom: 25px;
-  color: var(--color-white);
+  color: #ffffff;
+  text-align: center;
 }
 
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 18px;
 }
 
 .skills-tags span {
-  padding: 10px 18px;
+  padding: 10px 20px;
   border-radius: 8px;
-  background: #1c2333;
-  border: 1px solid #2d3648;
-  font-size: 1.4rem;
-  color: #8ab4ff;
-  transition: 0.3s ease;
+  background: rgba(30, 35, 55, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 1.5rem;
+  color: #8ab4ff;   /* 👈 IMPORTANT */
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: default;
 }
 
 .skills-tags span:hover {
-  background: #263248;
-  transform: translateY(-3px);
+  background: rgba(45, 60, 95, 0.9);
+  transform: translateY(-4px);
+  box-shadow: 0 5px 20px rgba(0, 140, 255, 0.2);
 }
