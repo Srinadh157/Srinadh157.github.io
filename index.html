@@ -148,17 +148,7 @@
   </li>
 </ul>
 
-          <li class="navbar-tabs-li dropdown" data-aos="fade-down" data-aos-delay="500">
-            <a href="#" aria-label="menu button">&#60;/Skills&#62;</a>
-            <ul class="dropdown-content">
-              <li class="skills">
-                <a href="#skills" aria-label="skills menu button">&#60;/Skills&#62;</a>
-              </li>
-              <li class="projects" data-aos-delay="700">
-                <a href="#projects" aria-label="projects menu button">&#60;/Projects&#62;</a>
-              </li>
-            </ul>
-          </li>
+          
 
 
         </ul>
@@ -503,8 +493,6 @@
 
 
 
-    </section>  <!-- education ends -->
-
 <section class="skills-section-container" id="skills">
   <div class="skills-wrapper">
 
@@ -824,6 +812,34 @@
   <!-- <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
     data-id="vinod.jangid07" data-description="Support me on Buy me a coffee!" data-message="" data-color="#BD5FFF"
     data-position="left" data-x_margin="18" data-y_margin="18"></script> -->
-</body>
+
+        <script>
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".navbar-tabs-li a");
+
+  window.addEventListener("scroll", () => {
+    let currentSection = "";
+
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 150;
+      const sectionHeight = section.offsetHeight;
+
+      if (window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + sectionHeight) {
+        currentSection = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.parentElement.classList.remove("activeThistab");
+
+      if (link.getAttribute("href") === "#" + currentSection) {
+        link.parentElement.classList.add("activeThistab");
+      }
+    });
+  });
+</script>
+        
+        </body>
 
 </html>
